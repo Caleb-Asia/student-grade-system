@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* ==============================
+   HEADER
+   ============================== */
+
+header {
+  background: #1e293b;
+  color: white;
+  padding: 30px 40px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+header h1 {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+header p {
+  color: #cbd5e1;
+  font-size: 16px;
+}
+
+
+/* ==============================
+   MAIN CONTENT
+   ============================== */
+
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 35px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+
+/* ==============================
+   SECTIONS / CARDS
+   ============================== */
+
+section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+section h2 {
+  font-size: 21px;
+  margin-bottom: 20px;
+  color: #1e293b;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+
+/* ==============================
+   FORMS
+   ============================== */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+input {
+  padding: 11px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+
+/* ==============================
+   SEARCH RESULT
+   ============================== */
+
+#searchResult {
+  margin-top: 18px;
+  padding: 12px;
+  background: #f1f5f9;
+  border-radius: 7px;
+  min-height: 20px;
+  color: #334155;
+}
+
+
+/* ==============================
+   STUDENT TABLE
+   ============================== */
+
+section:nth-child(3) {
+  grid-column: 1 / -1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+thead {
+  background: #1e293b;
+  color: white;
+}
+
+th,
+td {
+  padding: 13px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+td {
+  font-size: 15px;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* ==============================
+   CLASS STATISTICS
+   ============================== */
+
+section:nth-child(4) {
+  grid-column: 1 / -1;
+}
+
+#classStats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+#classStats p {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #2563eb;
+  font-weight: bold;
+  color: #475569;
+}
+
+#classStats span {
+  display: block;
+  font-size: 28px;
+  color: #1e293b;
+  margin-top: 5px;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 800px) {
+
+  main {
+    grid-template-columns: 1fr;
+    width: 94%;
+  }
+
+  section:nth-child(3),
+  section:nth-child(4) {
+    grid-column: auto;
+  }
+
+  #classStats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header {
+    padding: 25px 20px;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  main {
+    width: 95%;
+    margin: 20px auto;
+    gap: 18px;
+  }
+
+  section {
+    padding: 18px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  #classStats {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  th,
+  td {
+    padding: 9px;
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Grade Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Student Grade Management System</h1>
+        <p>Manage students, grades and class statistics</p>
+    </header>
+    <main>
+        <section>
+            <h2>Add Student</h2>
+
+            <form id="studentForm">
+
+                <label for="studentName">Name</label>
+                <input type="text" id="studentName" required>
+
+                <label for="studentAge">Age</label>
+                <input type="number" id="studentAge" required>
+
+                <label for="studentMark">Mark</label>
+                <input type="number" id="studentMark" min="0" max="100" required>
+
+                <button type="submit">Add Student</button>
+
+            </form>
+        </section>
+        <section>
+            <h2>Search Student</h2>
+
+            <form id="searchForm">
+
+                <label for="searchName">Student Name</label>
+
+                <input type="text" id="searchName" required>
+
+                <button type="submit">Search</button>
+
+            </form>
+
+            <div id="searchResult"></div>
+        </section>
+        <section>
+            <h2>Students</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Mark</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTableBody">
+
+                </tbody>
+
+            </table>
+        </section>
+        <section>
+            <h2>Class Statistics</h2>
+
+            <div id="classStats">
+
+                <p>Class Average: <span id="classAverage">0</span></p>
+
+                <p>Highest Mark: <span id="highestMark">0</span></p>
+
+                <p>Lowest Mark: <span id="lowestMark">0</span></p>
+
+                <p>Passing Students: <span id="passingStudents">0</span></p>
+
+            </div>
+        </section>
+    </main>
+<script src="script.js"></script>
+</body>
+</html>
